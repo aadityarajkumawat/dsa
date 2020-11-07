@@ -2,12 +2,12 @@
 #include <climits>
 using namespace std;
 
-int binarySearch(int arr[], int n, int s)
+int binarySearchI(int arr[], int n, int s)
 {
     int start = 0;
-    int end = n-1;
+    int end = n - 1;
 
-    for (;start <= end;)
+    for (; start <= end;)
     {
         int mid = (start + end) / 2;
         if (arr[mid] == s)
@@ -27,6 +27,26 @@ int binarySearch(int arr[], int n, int s)
     return -1;
 }
 
+int binarySearchR(int arr[], int start, int end, int s)
+{
+    if (start <= end)
+    {
+        int mid = (start + end) / 2;
+
+        if (arr[mid] == s)
+        {
+            return mid;
+        }
+        if (arr[mid] > s)
+        {
+            return binarySearchR(arr, start, mid - 1, s);
+        }
+
+        return binarySearchR(arr, mid + 1, end, s);
+    }
+    return -1;
+}
+
 int main()
 {
     int n, s;
@@ -37,7 +57,7 @@ int main()
         cin >> arr[i];
     }
 
-    if (binarySearch(arr, n, s) == -1)
+    if (binarySearchR(arr, 0, n - 1, s) == -1)
     {
         cout << "Not found" << endl;
     }
