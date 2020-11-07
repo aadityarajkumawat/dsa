@@ -2,7 +2,7 @@
 #include <climits>
 using namespace std;
 
-int linearSearch(int arr[], int n, int s)
+int linearSearchI(int arr[], int n, int s)
 {
     for (int i = 0; i < n; i++)
     {
@@ -10,6 +10,20 @@ int linearSearch(int arr[], int n, int s)
         {
             return i;
         }
+    }
+
+    return -1;
+}
+
+int linearSearchR(int arr[], int n, int s)
+{
+    if (arr[n-1] != s && n >= 0)
+    {
+        return linearSearchI(arr, n - 1, s);
+    }
+    else if (arr[n-1] == s && n >= 0)
+    {
+        return n;
     }
 
     return -1;
@@ -25,7 +39,7 @@ int main()
         cin >> arr[i];
     }
 
-    if (linearSearch(arr, n, s) == -1)
+    if (linearSearchR(arr, n, s) == -1)
     {
         cout << "Not Found" << endl;
     }
