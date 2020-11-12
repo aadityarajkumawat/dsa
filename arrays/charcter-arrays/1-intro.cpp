@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    char arr[100] = "apple";
+    char arr[100];
     cin >> arr;
 
     cout << arr[2];

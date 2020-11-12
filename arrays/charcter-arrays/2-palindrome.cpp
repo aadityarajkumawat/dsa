@@ -12,18 +12,18 @@ int main()
     char arr[n + 1];
     cin >> arr;
 
-    bool check = 1;
+    bool check = true;
 
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] != arr[n - i - 1])
+        if (arr[i] != arr[n - 1 - i])
         {
-            check = 0;
+            check = false;
             break;
         }
     }
 
-    if (check == true)
+    if (check)
     {
         cout << "Word is a palindrome" << endl;
     }
