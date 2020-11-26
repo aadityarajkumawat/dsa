@@ -2,11 +2,9 @@
 #include <climits>
 using namespace std;
 
-int main()
-{
-    char arr[100];
-    cin >> arr;
 
-    cout << arr[2];
+int main() {
+    string n = "df";
+    cout << n << endl;
     return 0;
 }

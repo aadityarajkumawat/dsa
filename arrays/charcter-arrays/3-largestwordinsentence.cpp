@@ -30,17 +30,15 @@ int main()
             currLen = 0;
         }
         else
-        {
             currLen++;
-        }
         if (arr[i] == '\0')
         {
             break;
         }
-
         i++;
     }
 
     cout << maxLen << endl;
+
     return 0;
 }
