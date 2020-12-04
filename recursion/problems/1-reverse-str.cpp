@@ -3,19 +3,20 @@ using namespace std;
 
 void reverse(string s)
 {
-    if (s.length() == 0)
-    {
-        return;
-    }
+  if (s.length() == 0)
+  { //base case
+    return;
+  }
 
-    string ros = s.substr(1);
-    reverse(ros);
-    cout << s[0];
+  string ros = s.substr(1);
+  reverse(ros);
+
+  cout << s[0] << endl;
 }
 
 int main()
 {
-    reverse("binod");
-
-    return 0;
+  string s = "binod";
+  reverse(s);
+  return 0;
 }

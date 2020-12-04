@@ -6,7 +6,7 @@ using namespace std;
 void replacePi(string s)
 {
     if (s.length() == 0)
-    { //base
+    {
         return;
     }
 
