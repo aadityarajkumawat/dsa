@@ -8,14 +8,15 @@ void subseq(string s, string ans) {
     }
 
     char ch = s[0];
+    int code = ch;
     string ros = s.substr(1);
 
     subseq(ros, ans);
     subseq(ros, ans + ch);
+    subseq(ros, ans + to_string(code));
 }
 
 int main() {
-    subseq("ABC", "");
-    cout << endl;
+    subseq("AB", "");
     return 0;
 }
