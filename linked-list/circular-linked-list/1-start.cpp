@@ -67,6 +67,22 @@ Node *insertAtLast(Node *head, int data)
   return head;
 }
 
+// DELETION
+
+Node *deleteFromStart(Node *head)
+{
+  Node *secondLastNode = head;
+  while (secondLastNode->next != head)
+  {
+    secondLastNode = secondLastNode->next;
+  }
+  Node *deleteThisNode = secondLastNode->next;
+  secondLastNode->next = deleteThisNode->next;
+  free(deleteThisNode);
+
+  return secondLastNode->next;
+}
+
 int main()
 {
   Node *head = new Node();
@@ -89,7 +105,8 @@ int main()
   head = insertAtStart(head, 00);
   head = insertAtIndex(head, 2, 16);
   head = insertAtLast(head, 55);
-
+  traverseCircularLinkedList(head);
+  head = deleteFromStart(head);
   traverseCircularLinkedList(head);
   return 0;
 }
