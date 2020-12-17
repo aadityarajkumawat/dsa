@@ -18,7 +18,7 @@ void traverseCircularLinkedList(Node *head)
     cout << ptr->data << "->";
     ptr = ptr->next;
   }
-  cout << ptr->data;
+  cout << ptr->data << endl;
 }
 
 // INSERTION
@@ -35,6 +35,36 @@ Node *insertAtStart(Node *head, int data)
   }
   ptr->next = newNode;
   return newNode;
+}
+
+Node *insertAtIndex(Node *head, int index, int data)
+{
+  Node *ptr = head;
+  Node *newNode = new Node();
+  newNode->data = data;
+  int i = 1;
+  while (i != index)
+  {
+    ptr = ptr->next;
+    i++;
+  }
+  newNode->next = ptr->next;
+  ptr->next = newNode;
+  return head;
+}
+
+Node *insertAtLast(Node *head, int data)
+{
+  Node *ptr = head;
+  Node *newNode = new Node();
+  newNode->data = data;
+  while (ptr->next != head)
+  {
+    ptr = ptr->next;
+  }
+  newNode->next = head;
+  ptr->next = newNode;
+  return head;
 }
 
 int main()
@@ -57,6 +87,8 @@ int main()
   fourth->next = head;
 
   head = insertAtStart(head, 00);
+  head = insertAtIndex(head, 2, 16);
+  head = insertAtLast(head, 55);
 
   traverseCircularLinkedList(head);
   return 0;
