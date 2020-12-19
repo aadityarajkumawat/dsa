@@ -5,14 +5,14 @@ class Node
 {
 public:
   int data;
-  Node *next;
+  Node* next;
 };
 
 // TRAVERSAL
 
-void traverseCircularLinkedList(Node *head)
+void traverseCircularLinkedList(Node* head)
 {
-  Node *ptr = head;
+  Node* ptr = head;
   while (ptr->next != head)
   {
     cout << ptr->data << "->";
@@ -23,10 +23,10 @@ void traverseCircularLinkedList(Node *head)
 
 // INSERTION
 
-Node *insertAtStart(Node *head, int data)
+Node* insertAtStart(Node* head, int data)
 {
-  Node *newNode = new Node();
-  Node *ptr = head;
+  Node* newNode = new Node();
+  Node* ptr = head;
   newNode->data = data;
   newNode->next = head;
   while (ptr->next != head)
@@ -37,10 +37,10 @@ Node *insertAtStart(Node *head, int data)
   return newNode;
 }
 
-Node *insertAtIndex(Node *head, int index, int data)
+Node* insertAtIndex(Node* head, int index, int data)
 {
-  Node *ptr = head;
-  Node *newNode = new Node();
+  Node* ptr = head;
+  Node* newNode = new Node();
   newNode->data = data;
   int i = 1;
   while (i != index)
@@ -53,10 +53,10 @@ Node *insertAtIndex(Node *head, int index, int data)
   return head;
 }
 
-Node *insertAtLast(Node *head, int data)
+Node* insertAtLast(Node* head, int data)
 {
-  Node *ptr = head;
-  Node *newNode = new Node();
+  Node* ptr = head;
+  Node* newNode = new Node();
   newNode->data = data;
   while (ptr->next != head)
   {
@@ -69,14 +69,14 @@ Node *insertAtLast(Node *head, int data)
 
 // DELETION
 
-Node *deleteFromStart(Node *head)
+Node* deleteFromStart(Node* head)
 {
-  Node *secondLastNode = head;
+  Node* secondLastNode = head;
   while (secondLastNode->next != head)
   {
     secondLastNode = secondLastNode->next;
   }
-  Node *deleteThisNode = secondLastNode->next;
+  Node* deleteThisNode = secondLastNode->next;
   secondLastNode->next = deleteThisNode->next;
   free(deleteThisNode);
 
@@ -85,10 +85,10 @@ Node *deleteFromStart(Node *head)
 
 int main()
 {
-  Node *head = new Node();
-  Node *second = new Node();
-  Node *third = new Node();
-  Node *fourth = new Node();
+  Node* head = new Node();
+  Node* second = new Node();
+  Node* third = new Node();
+  Node* fourth = new Node();
 
   head->data = 11;
   head->next = second;
