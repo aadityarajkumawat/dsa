@@ -49,26 +49,26 @@ Node* push(Node* top, int x) {
   }
 }
 
-Node* pop(Node* top) {
-  if (isEmpty(top)) {
+int pop(Node** top) {
+  if (isEmpty(*top)) {
     cout << "Stack is empty" << endl;
-    return top;
+    return -1;
   }
   else {
-    Node* n = top;
-    top = (top)->next;
+    Node* n = *top;
+    *top = (*top)->next;
     int x = n->data;
     free(n);
 
-    return top;
+    return x;
   }
 }
 
-Node* peek(Node* top, int index) {
-  Node* ptr = top;
-  if (isEmpty(top)) {
+int peek(Node** top, int index) {
+  Node* ptr = *top;
+  if (isEmpty(*top)) {
     cout << "Stack is empty" << endl;
-    return top;
+    return -1;
   }
   else {
     int x = 1;
@@ -76,7 +76,7 @@ Node* peek(Node* top, int index) {
       ptr = ptr->next;
       x++;
     }
-    return ptr;
+    return ptr->data;
   }
 }
 
@@ -93,11 +93,9 @@ int main() {
    *  ________
   */
   linkedListTraversal(top);
-  top = (pop(top));
-  cout << "Popping an element " << top->data << endl;
+  cout << "Popping an element " << pop(&top) << endl;
   linkedListTraversal(top);
-  top = peek(top, 2);
-  cout << "Peeking element at index 2" << top->data;
+  cout << "Peeking element at index 2: " << peek(&top, 2) << endl;
   linkedListTraversal(top);
   return 0;
 }
