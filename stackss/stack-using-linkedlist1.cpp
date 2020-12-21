@@ -49,11 +49,55 @@ Node* push(Node* top, int x) {
   }
 }
 
+Node* pop(Node* top) {
+  if (isEmpty(top)) {
+    cout << "Stack is empty" << endl;
+    return top;
+  }
+  else {
+    Node* n = top;
+    top = (top)->next;
+    int x = n->data;
+    free(n);
+
+    return top;
+  }
+}
+
+Node* peek(Node* top, int index) {
+  Node* ptr = top;
+  if (isEmpty(top)) {
+    cout << "Stack is empty" << endl;
+    return top;
+  }
+  else {
+    int x = 1;
+    while (x < index) {
+      ptr = ptr->next;
+      x++;
+    }
+    return ptr;
+  }
+}
+
 int main() {
   Node* top = NULL;
   top = push(top, 70);
   top = push(top, 35);
   top = push(top, 17);
+  top = push(top, 8);
+  /**
+   *  |   17  |
+   *  |   35  |
+   *  |   70  |
+   *  ________
+  */
+  linkedListTraversal(top);
+  top = (pop(top));
+  cout << "Popping an element " << top->data << endl;
+  linkedListTraversal(top);
+  top = peek(top, 2);
+  cout << "Peeking element at index 2" << top->data;
   linkedListTraversal(top);
   return 0;
 }
