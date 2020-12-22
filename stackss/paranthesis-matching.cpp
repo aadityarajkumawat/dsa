@@ -4,32 +4,32 @@ using namespace std;
 /**
  * Condition for a balanced expression
  * 1) While popping stack should not underflow
- * 2) At end of expression(\0) the stack must be empty 
+ * 2) At end of expression(\0) the stack must be empty
 */
 
 class Stack {
-	public:
-		int size;
-		int top;
-		char* arr;
+public:
+	int size;
+	int top;
+	char* arr;
 };
 
 int isEmpty(Stack* stack) {
-	if(stack->top == -1) {
+	if (stack->top == -1) {
 		return 1;
 	}
 	return 0;
 }
 
 int isFull(Stack* stack) {
-	if(stack->top == stack->size - 1) {
+	if (stack->top == stack->size - 1) {
 		return 1;
 	}
 	return 0;
 }
 
 void push(Stack* stack, char data) {
-	if(isFull(stack)) {
+	if (isFull(stack)) {
 		cout << "Stack Overflow" << endl;
 	}
 	else {
@@ -39,8 +39,9 @@ void push(Stack* stack, char data) {
 }
 
 char pop(Stack* stack) {
-	if(isEmpty(stack)) {
+	if (isEmpty(stack)) {
 		cout << "Stack Underflow" << endl;
+		// asumming 'A' won't be there in expression
 		return 'A';
 	}
 	else {
@@ -51,27 +52,29 @@ char pop(Stack* stack) {
 }
 
 int main() {
-	Stack *stack = new Stack();
-	
+	Stack* stack = new Stack();
+
 	stack->size = 80;
 	stack->top = -1;
 	stack->arr = new char[stack->size];
-	
-	string expression = "(34)*12+22";
+
+	string expression = "(34*12)+22";
 	char arrayOfExpressionCharcters[expression.length()];
-	for(int i  = 0; i < expression.length(); i++) {
+	for (int i = 0; i < expression.length(); i++) {
 		arrayOfExpressionCharcters[i] = expression[i];
-		if(expression[i] == '(') {
+		if (expression[i] == '(') {
 			push(stack, expression[i]);
 		}
-		else if(expression[i] == ')') {
+		else if (expression[i] == ')') {
 			pop(stack);
 		}
-		else if(expression.length()-1 ==  i) {
-			if(stack->top == -1) {
+		else if (expression.length() - 1 == i) {
+			if (stack->top == -1) {
+				cout << expression << endl;
 				cout << "Paranthesis Matched" << endl;
 			}
 			else {
+				cout << expression << endl;
 				cout << "Paranthesis not matched" << endl;
 			}
 		}
