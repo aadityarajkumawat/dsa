@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
-
+/**
+ * Drawbacks of implementing Queue using arrays
+ * Space is not used effectively
+*/
 class Queue {
 public:
   int size;
@@ -24,7 +27,7 @@ int isEmpty(Queue* q) {
 
 void enqueue(Queue* q, int val) {
   if (isFull(q)) {
-    cout << "Queue Overflow" << endl;
+    cout << "Queue is Full" << endl;
   }
   else {
     q->r = q->r + 1;
