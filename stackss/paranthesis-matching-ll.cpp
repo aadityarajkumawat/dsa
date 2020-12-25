@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
 class Node {
 	public:
 		char data;
@@ -67,5 +66,4 @@ int main() {
 		}
 	}
 
-	return 0;
-}
+	return 0;}
