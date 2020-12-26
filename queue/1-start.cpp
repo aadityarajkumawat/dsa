@@ -1,9 +1,5 @@
 #include <iostream>
 using namespace std;
-/**
- * Drawbacks of implementing Queue using arrays
- * Space is not used effectively
-*/
 class Queue {
 public:
   int size;
