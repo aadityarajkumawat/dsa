@@ -3,16 +3,16 @@
 
 class Node
 {
-public:
-    int data;
-    Node *left;
-    Node *right;
+    public:
+	int data;
+	Node *left;
+	Node *right;
 };
 
 void print2DUtil(Node *root, int space)
 {
     if (root == NULL)
-        return;
+	return;
 
     space += COUNT;
 
@@ -21,7 +21,7 @@ void print2DUtil(Node *root, int space)
     std::cout << std::endl;
     for (int i = COUNT; i < space; i++)
     {
-        std::cout << " ";
+	std::cout << " ";
     }
     std::cout << root->data << "\n";
 
@@ -42,38 +42,38 @@ Node *insert(Node *root, int data)
 
     if (root == NULL)
     {
-        return newNode;
+	return newNode;
     }
     else
     {
-        Node *current = root;
-        Node *parent = NULL;
+	Node *current = root;
+	Node *parent = NULL;
 
-        while (true)
-        {
-            parent = current;
+	while (true)
+	{
+	    parent = current;
 
-            if (data < parent->data)
-            {
-                current = current->left;
+	    if (data < parent->data)
+	    {
+		current = current->left;
 
-                if (current == NULL)
-                {
-                    parent->left = newNode;
-                    return root;
-                }
-            }
-            else
-            {
-                current = current->right;
+		if (current == NULL)
+		{
+		    parent->left = newNode;
+		    return root;
+		}
+	    }
+	    else
+	    {
+		current = current->right;
 
-                if (current == NULL)
-                {
-                    parent->right = newNode;
-                    return root;
-                }
-            }
-        }
+		if (current == NULL)
+		{
+		    parent->right = newNode;
+		    return root;
+		}
+	    }
+	}
     }
 }
 
