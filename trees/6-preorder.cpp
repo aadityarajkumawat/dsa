@@ -85,6 +85,14 @@ void preorder(Node *root) {
   }
 }
 
+void postorder(Node *root) {
+  if(root != NULL) {
+    preorder(root->left);
+    preorder(root->right);
+    std::cout << root->data << " ";
+  }
+}
+
 int main()
 {
   Node *root = insert(NULL, 5);
@@ -94,8 +102,8 @@ int main()
   root = insert(root, 2);
   root = insert(root, 7);
 
-  //preorder(root);
-  print2D(root);
+  postorder(root);
+  //print2D(root);
   return 0;
 }
 
