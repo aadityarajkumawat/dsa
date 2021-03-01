@@ -1,4 +1,5 @@
 #include <iostream>
+#define COUNT 10
 
 class Node
 {
@@ -7,6 +8,30 @@ class Node
     Node *left;
     Node *right;
 };
+
+void print2DUtil(Node *root, int space)
+{
+  if (root == NULL)
+    return;
+
+  space += COUNT;
+
+  print2DUtil(root->right, space);
+
+  std::cout << std::endl;
+  for (int i = COUNT; i < space; i++)
+  {
+    std::cout << " ";
+  }
+  std::cout << root->data << "\n";
+
+  print2DUtil(root->left, space);
+}
+
+void print2D(Node *root)
+{
+  print2DUtil(root, 0);
+}
 
 Node *insert(Node *root, int data)
 {
@@ -52,16 +77,25 @@ Node *insert(Node *root, int data)
   }
 }
 
+void inorder(Node *root) {
+  if(root != NULL) {
+    inorder(root->left);
+    std::cout << root->data << " ";
+    inorder(root->right);
+  }
+}
+
 int main()
 {
   Node *root = insert(NULL, 5);
   root = insert(root, 3);
   root = insert(root, 6);
+  root = insert(root, 4);
+  root = insert(root, 2);
+  root = insert(root, 7);
 
-  if (search(root, 3))
-  {
-    std::cout << "Three found!!";
-  }
+  //inorder(root);
+  print2D(root);
   return 0;
 }
 
