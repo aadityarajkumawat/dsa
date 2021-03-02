@@ -106,6 +106,25 @@ Node *insert(Node *root, int data) {
   }
 }
 
+void search(int data) {
+  Node *current = root;
+
+  while(current->data != data) {
+    if(current->data > data) {
+      current = current->left;
+    }
+    else {
+      current = current->right;
+    }
+
+    if(current == NULL) {
+      return NULL;
+    }
+  }
+
+  return current;
+}
+
 int main() {
   Node *root = insert(NULL, 27);
   root = insert(root, 14);
