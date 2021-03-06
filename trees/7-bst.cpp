@@ -106,7 +106,7 @@ Node *insert(Node *root, int data) {
   }
 }
 
-void search(int data) {
+bool search(int data, Node *root) {
   Node *current = root;
 
   while(current->data != data) {
@@ -118,24 +118,33 @@ void search(int data) {
     }
 
     if(current == NULL) {
-      return NULL;
+      return false; 
     }
   }
 
-  return current;
+  return true;
 }
 
 int main() {
   Node *root = insert(NULL, 27);
-  root = insert(root, 14);
-  root = insert(root, 10);
-  root = insert(root, 19);
-  root = insert(root, 35);
-  root = insert(root, 31);
-  root = insert(root, 42);
+  root = insert(root, 20);
+  root = insert(root, 17);
+  root = insert(root, 15);
+  root = insert(root, 12);
+  root = insert(root, 8);
+  root = insert(root, 3);
 
-  printTree(root, nullptr, false);
+  Node *r = insert(NULL, 8);
+  r = insert(r, 7);
+  r = insert(r, 6);
+  /**
+  for (int i = 7;i > 0;i--) {
+    r = insert(r, i);
+  }
+  */
 
+  //printTree(root, nullptr, false);
+  printTree(r, nullptr, false);
   return 0;
 }
 
