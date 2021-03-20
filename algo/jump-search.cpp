@@ -32,8 +32,8 @@ int main()
     //`````````````````````` 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15
     int n = 55;
 
-    int qw = jumpSearch(nums, n);
+    int idx = jumpSearch(nums, n);
 
-    std::cout << qw << std::endl;
+    std::cout << idx << std::endl;
     return 0;
 }
