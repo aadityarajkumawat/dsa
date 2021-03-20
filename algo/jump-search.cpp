@@ -2,35 +2,38 @@
 #include <vector>
 #include <cmath>
 
-int jumpSearch(std::vector<int> &nums, int x, int n)
+int jumpSearch(std::vector<int> &nums, int x)
 {
-    int step = std::sqrt(n);
-    int prev = 0;
+    int step = std::sqrt(nums.size());
+    int low = 0, high = step;
+    int idx = -1;
 
-    while (nums[std::min(step, n) - 1] < x)
+    while (nums[high] < x && high < nums.size())
     {
-        prev = step;
-        step += std::sqrt(n);
-        if (prev >= n)
-            return -1;
+        high += step;
+        low += step;
     }
 
-    while (nums[prev] < x)
+    for (int i = low; i <= high; i++)
     {
-        prev++;
-        if (prev == std::min(step, n))
-            return -1;
+        if (nums[i] == x)
+        {
+            idx = i;
+            break;
+        }
     }
 
-    if (nums[prev] == x)
-        return prev;
-
-    return -1;
+    return idx;
 }
 
 int main()
 {
-    std::vector<int> nums = {30, 50, 10, 5, 33, 23, 7};
-    int n = 23;
+    std::vector<int> nums = {5, 12, 15, 21, 28, 33, 37, 40, 41, 43, 49, 50, 52, 53, 54, 55};
+    //`````````````````````` 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15
+    int n = 55;
+
+    int qw = jumpSearch(nums, n);
+
+    std::cout << qw << std::endl;
     return 0;
 }

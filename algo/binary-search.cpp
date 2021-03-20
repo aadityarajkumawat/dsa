@@ -47,7 +47,7 @@ int binarySearchR(std::vector<int> &nums, int n, int start, int end)
 
 int main()
 {
-    std::vector<int> nums = {30, 50, 10, 5, 33, 23, 7};
+    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8};
     int n = 23;
 
     int idx = binarySearchR(nums, n, 0, nums.size() - 1);
