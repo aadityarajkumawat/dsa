@@ -1,32 +1,29 @@
 #include <iostream>
-using namespace std;
 
 void dec(int n)
 {
     if (n == 0)
-    {
         return;
-    }
 
-    cout << n << " ";
+    std::cout << n << std::endl;
     dec(n - 1);
 }
 
 void inc(int n)
 {
     if (n == 0)
-    {
         return;
-    }
-
     inc(n - 1);
-    cout << n << " ";
+    std::cout << n << std::endl;
 }
 
 int main()
 {
     int n;
-    cin >> n;
+    std::cin >> n;
+    std::cout << std::endl;
+    dec(n);
+    std::cout << std::endl;
     inc(n);
     return 0;
 }
