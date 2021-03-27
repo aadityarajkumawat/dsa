@@ -27,8 +27,8 @@ int lastocc(int arr[], int n, int i, int key)
 
 int main()
 {
-    int arr[] = {4, 2, 1, 2, 5, 2, 7};
+    int arr[] = {4, 2, 1, 2, 5, 8, 7};
     std::cout << firstocc(arr, 7, 0, 2) << std::endl;
-    // std::cout << last_occurance(arr, 7, 0, 2);
+    std::cout << lastocc(arr, 7, 0, 2);
     return 0;
 }
