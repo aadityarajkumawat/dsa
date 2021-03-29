@@ -13,14 +13,13 @@ void insertionSort(std::vector<int> &nums)
 
   for (int i = 0; i < nums.size() - 1; i++)
   {
-      int minInUnSortedPart = i;
-      for(int j = i + 1;j < nums.size();j++)
-      {
-	if(nums[j] < nums[minInUnSortedPart]) {
-	    minInUnSortedPart = j;
-	}	  
-      }
-      swap(nums[i], nums[minInUnSortedPart]);
+    int minInUnSortedPart = i;
+    for (int j = i + 1; j < nums.size(); j++)
+    {
+      if (nums[j] < nums[minInUnSortedPart])
+        minInUnSortedPart = j;
+    }
+    swap(nums[i], nums[minInUnSortedPart]);
   }
 }
 
@@ -30,10 +29,11 @@ int main()
 
   insertionSort(nums);
 
-  for(int i = 0;i < nums.size();i++) {
-      std::cout << nums[i] << " ";
+  for (int i = 0; i < nums.size(); i++)
+  {
+    std::cout << nums[i] << " ";
   }
   std::cout << std::endl;
+  // 11, 12, 22, 25, 64
   return 0;
 }
-
