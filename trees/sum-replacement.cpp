@@ -15,8 +15,9 @@ struct Node
     }
 };
 
+// time complexity - O(n)
 void sumReplace(Node* root) {
-    if (root) return;
+    if (root == NULL) return;
     sumReplace(root->left);
     sumReplace(root->right);
 
@@ -58,5 +59,8 @@ int main() {
     preorder(root);
     cout << endl;
 
+    sumReplace(root);
+    preorder(root);
+    cout << endl;
     return 0;
 }
