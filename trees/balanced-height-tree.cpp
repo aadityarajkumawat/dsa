@@ -50,6 +50,7 @@ bool isBalanced(Node* root) {
 bool isBalancedBetter(Node* root, int* height) {
     if (root == NULL) return true;
     int lh = 0, rh = 0;
+    cout << "Before-> " << "lh: " << lh << ", rh: " << rh << endl;
     if (isBalancedBetter(root->left, &lh) == false) {
         return false;
     }
@@ -57,7 +58,10 @@ bool isBalancedBetter(Node* root, int* height) {
         return false;
     }
 
+    cout << "After-> " << "lh: " << lh << ", rh: " << rh << endl;
+
     *height = max(lh, rh) + 1;
+    // cout << "Height: " << *height << " left height: " << lh << " right height: " << rh << endl;
 
     if (abs(lh - rh) <= 1) {
         return true;
@@ -76,15 +80,15 @@ int main() {
     4   5 6   7
   */
 
-    struct Node* root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
+  // struct Node* root = new Node(1);
+  // root->left = new Node(2);
+  // root->right = new Node(3);
 
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
+  // root->left->left = new Node(4);
+  // root->left->right = new Node(5);
 
-    root->right->left = new Node(6);
-    root->right->right = new Node(7);
+  // root->right->left = new Node(6);
+  // root->right->right = new Node(7);
 
     Node* root2 = new Node(1);
     root2->left = new Node(2);
@@ -98,7 +102,7 @@ int main() {
     // }
 
     int height = 0;
-    if (isBalancedBetter(root, &height) == true) {
+    if (isBalancedBetter(root2, &height) == true) {
         cout << "Balanced Tree" << endl;
     }
     else {
