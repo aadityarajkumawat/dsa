@@ -101,7 +101,7 @@ int main() {
     fs.create_directory(path);
     fs.create_file(new_file_path);
 
-    std::string base_path = "/home/edydee///";
+    std::string base_path = "/home/edydee//";
     std::vector<std::string> parts = { "/cool//", "/bin", "slack" };
 
     std::string pat = path_utils.join(base_path, parts);
