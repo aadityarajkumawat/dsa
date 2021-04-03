@@ -2,9 +2,15 @@
 #include <iostream>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
 
 class FileSystemUtils {
 public:
+    /**
+     * Takes path as a parameter and creates a folder at given location
+     * if not already present.
+    */
     void create_directory(std::string& path) {
         const char* type_safe_path = path.c_str();
         if (mkdir(type_safe_path, 0777) == -1) {
@@ -15,6 +21,10 @@ public:
         }
     }
 
+    /**
+     * Takes file name as parameter and creates a file in present
+     * working directory.
+    */
     void create_file(std::string& file_name) {
         std::fstream file;
         file.open(file_name, std::ios::out);
@@ -32,18 +42,22 @@ public:
 
 class PathUtils {
 public:
+    /**
+     * Takes two parameters first is a string which is base of the path
+     * and second is a vector of strings, it combines the base path with
+     * all the parts provided in the vector.
+    */
     std::string join(std::string& base_path, std::vector<std::string>& parts_of_path) {
         std::string joint_string = "";
         const std::string base = trim_slash(base_path, left_trim);
         joint_string.append(base);
 
         for (int i = 0;i < parts_of_path.size();i++) {
+            joint_string.push_back(SLASH);
             if (i != parts_of_path.size() - 1) {
-                joint_string.push_back(SLASH);
                 joint_string.append(trim_slash(parts_of_path[i], trim));
             }
             else {
-                joint_string.push_back(SLASH);
                 joint_string.append(trim_slash(parts_of_path[i], left_trim));
             }
         }
@@ -57,6 +71,11 @@ private:
     std::string trim = "TRIM";
     const char SLASH = '/';
 
+    /**
+     * Takes first argument as a string and second as a string strictly
+     * of type, left_trim, right_trim, trim and trims all slashes from
+     * provided side.
+    */
     std::string trim_slash(std::string& path, std::string& trim_type) {
         std::string final_string = "";
         if (trim_type == left_trim || trim_type == right_trim || trim_type == trim) {
@@ -90,7 +109,6 @@ private:
     }
 };
 
-
 int main() {
     std::string path = "./coolh";
     std::string new_file_path = "./coolh/cool.js";
@@ -102,9 +120,14 @@ int main() {
     fs.create_file(new_file_path);
 
     std::string base_path = "/home/edydee//";
-    std::vector<std::string> parts = { "/cool//", "/bin", "slack" };
+    std::vector<std::string> parts = { "/home/all/cood.js" };
 
     std::string pat = path_utils.join(base_path, parts);
+    std::cout << pat << std::endl;
+
+    fs.create_file(pat);
+
+    std::cout << get_current_dir_name() << std::endl;
 
     return 0;
 }
