@@ -75,6 +75,21 @@ void max_sum_v1(int arr[], int size) {
     cout << max_sum << endl;
 }
 
+int kadane(int arr[], int size) {
+    int curr_sum = 0;
+    int max_sum = INT_MIN;
+
+    for (int i = 0; i < size; i++) {
+        curr_sum += arr[i];
+
+        if (curr_sum < 0) { curr_sum = 0; }
+
+        max_sum = max(max_sum, curr_sum);
+    }
+
+    return max_sum;
+}
+
 void max_sum_v2(int arr[], int size) {
     int max_sum = INT_MIN;
     int sum = 0;
@@ -91,6 +106,21 @@ void max_sum_v2(int arr[], int size) {
     }
 
     cout << max_sum << endl;
+}
+
+void max_sum_v3(int arr[], int size) {
+    int wrapsum = 0;
+    int nonwrapsum = kadane(arr, size);
+    int total_sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        total_sum += arr[i];
+        arr[i] = -arr[i];
+    }
+
+    wrapsum = total_sum + kadane(arr, size);
+
+    cout << max(wrapsum, nonwrapsum) << endl;
 }
 
 int main() {
