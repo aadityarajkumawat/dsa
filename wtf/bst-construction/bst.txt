@@ -1,0 +1,27 @@
+What is a BST(Binary Search Tree)?
+
+A tree in which each node follow a special rule,
+which is the value of node on left has value less than
+its root node and value of node on right should be
+greater than or equal to its root.
+
+                10
+              /    \
+             5      15
+           /   \    /  \
+          2     5  13   22
+         /           \
+        1             14
+
+Operations that we can perform?
+* Insertion
+* Searching
+* Deletion (hardest of all)
+
+Time Complexities
+Average: O(log(N)) -> For all three (insertion, searching, deletion)
+Worst: O(N) -> worst case is when BST has only one directional branch, almost like a linked list
+
+Space Complexities
+Average: O(1) -> Iterative approach, O(log(N)) -> Recursive approach
+Worst: O(1) -> Iterative approach, O(log(N)) -> Recursive approach
