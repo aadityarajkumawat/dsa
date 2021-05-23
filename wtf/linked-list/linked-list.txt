@@ -1,0 +1,19 @@
+Here, I m dealing with doubly linked lists,
+and moving to singly linked lists won't be
+much of a problem, after this.
+
+```Searching```
+O(n) time
+O(1) space
+
+```Removal methods```
+O(1) time, the node to be remove is already provided
+O(1) space
+
+-> Remove All nodes by value
+O(n) time
+O(1) space
+
+```Insertion at position(p)```
+O(p) time
+O(1) space
