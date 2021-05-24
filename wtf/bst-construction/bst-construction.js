@@ -115,9 +115,10 @@ class BST {
     }
 }
 
-const root = new BST(10);
+module.exports = { BST };
+// const root = new BST(10);
 
-root.insert(8).insert(7).insert(6).insert(11).insert(9).insert(16);
+// root.insert(8).insert(7).insert(6).insert(11).insert(9).insert(16);
 
 /**
         10
@@ -132,5 +133,5 @@ root.insert(8).insert(7).insert(6).insert(11).insert(9).insert(16);
 // root.printBST();
 // console.log(root.contains(4));
 
-root.remove(8).remove(7).remove(6);
-root.printBST();
+// root.remove(8).remove(7).remove(6);
+// root.printBST();

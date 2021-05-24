@@ -17,8 +17,8 @@ public:
         BST* currentNode = this;
 
         while (true) {
-            if(value < currentNode->value) {
-                if(currentNode->left != nullptr) {
+            if (value < currentNode->value) {
+                if (currentNode->left != nullptr) {
                     currentNode = currentNode->left;
                 }
                 else {
@@ -27,7 +27,7 @@ public:
                 }
             }
             else {
-                if(currentNode->right != nullptr) {
+                if (currentNode->right != nullptr) {
                     currentNode = currentNode->right;
                 }
                 else {
@@ -43,11 +43,11 @@ public:
     bool contains(int value) {
         BST* currentNode = this;
 
-        while(currentNode != nullptr) {
-            if(value < currentNode->value) {
+        while (currentNode != nullptr) {
+            if (value < currentNode->value) {
                 currentNode = currentNode->left;
             }
-            else if(value > currentNode->value) {
+            else if (value > currentNode->value) {
                 currentNode = currentNode->right;
             }
             else {
@@ -61,8 +61,8 @@ public:
     BST* remove(int value, BST* parentNode = nullptr) {
         BST* currentNode = this;
 
-        while(currentNode != nullptr) {
-            if(value < currentNode->value) {
+        while (currentNode != nullptr) {
+            if (value < currentNode->value) {
                 parentNode = currentNode;
                 currentNode = currentNode->left;
             }
@@ -71,12 +71,12 @@ public:
                 currentNode = currentNode->right;
             }
             else {
-                if(currentNode->left != nullptr && currentNode->right != nullptr) {
+                if (currentNode->left != nullptr && currentNode->right != nullptr) {
                     currentNode->value = currentNode->right->getMinValue();
                     currentNode->right->remove(currentNode->value, currentNode);
                 }
                 else if (parentNode == nullptr) {
-                    if(currentNode->left != nullptr) {
+                    if (currentNode->left != nullptr) {
                         currentNode->value = currentNode->left->value;
                         currentNode->left = currentNode->left->left;
                         currentNode->right = currentNode->left->right;
@@ -91,7 +91,7 @@ public:
                     }
                 }
                 else if (parentNode->left == currentNode) {
-                    if(currentNode->left != nullptr) {
+                    if (currentNode->left != nullptr) {
                         parentNode->left = currentNode->left;
                     }
                     else {
@@ -99,7 +99,7 @@ public:
                     }
                 }
                 else if (parentNode->right == currentNode) {
-                    if(currentNode->right != nullptr) {
+                    if (currentNode->right != nullptr) {
                         parentNode->right = currentNode->right;
                     }
                     else {
@@ -117,7 +117,7 @@ public:
     int getMinValue() {
         BST* currentNode = this;
 
-        while(currentNode->left != nullptr) {
+        while (currentNode->left != nullptr) {
             currentNode = currentNode->left;
         }
 
@@ -127,11 +127,11 @@ public:
     void printBST() {
         BST* currentNode = this;
 
-        if(currentNode->left) {
+        if (currentNode->left) {
             currentNode->left->printBST();
         }
         cout << currentNode->value << endl;
-        if(currentNode->right) {
+        if (currentNode->right) {
             currentNode->right->printBST();
         }
     }
