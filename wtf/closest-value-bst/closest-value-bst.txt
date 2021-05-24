@@ -1,0 +1,12 @@
+Given a BST and a target we find a value closest
+to the given target
+
+worst case binary tree has child nodes only in one direction
+
+```Time Complexity```
+Average: O(log(n))
+Worst: O(n), when tree has child nodes only in one direction
+
+```Space Complexity```
+Recursively: O(log(n)), in worst case it will be O(n)
+Iteratively: O(1)
