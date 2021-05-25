@@ -6,6 +6,180 @@ class Node {
     }
 }
 
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+
+    // O(1) time | O(1) space
+    setHead(node) {
+        if (!this.head) {
+            this.insert(node);
+            return;
+        }
+
+        node.next = this.head;
+        this.head = node;
+    }
+
+    // O(n) time | O(1) space
+    setTail(node) {
+        this.insert(node);
+    }
+
+    // O(n) time | O(1) space
+    printList() {
+        let node = this.head;
+        let outputStr = "";
+
+        while (node) {
+            if (!node.next) {
+                outputStr += node.value;
+            } else {
+                outputStr += node.value + " ➞ ";
+            }
+            node = node.next;
+        }
+
+        console.log(outputStr);
+    }
+
+    // O(n) time | O(1) space
+    insert(node) {
+        if (!this.head) {
+            this.head = node;
+            return;
+        }
+
+        let lastNode = this.head;
+
+        while (lastNode.next) {
+            lastNode = lastNode.next;
+        }
+
+        lastNode.next = node;
+
+        return lastNode.next;
+    }
+
+    // O(n) time | O(1) space
+    insertAfter(node, nodeToInsert) {
+        if (nodeToInsert === this.head && !nodeToInsert.next) {
+            return;
+        }
+
+        this.remove(nodeToInsert);
+
+        if (!node.next) {
+            this.setTail(nodeToInsert);
+        } else {
+            nodeToInsert.next = node.next;
+            node.next = nodeToInsert;
+        }
+    }
+
+    // O(n) time | O(1) space
+    insertBefore(node, nodeToInsert) {
+        if (nodeToInsert === this.head && !nodeToInsert.next) {
+            return;
+        }
+
+        this.remove(nodeToInsert);
+
+        if (node === this.head) {
+            this.setHead(nodeToInsert);
+        } else {
+            let prevNode = this.head;
+
+            while (prevNode.next !== node) {
+                prevNode = prevNode.next;
+            }
+
+            prevNode.next = nodeToInsert;
+            nodeToInsert.next = node;
+        }
+    }
+
+    // O(p) time | O(1) space
+    insertAtPosition(position, node) {
+        if (position === 1) {
+            this.setHead(node);
+        }
+
+        let currentPosition = 1;
+        let currentNode = this.node;
+
+        while (currentNode && currentPosition !== position) {
+            currentNode = currentNode.next;
+            currentPosition += 1;
+        }
+
+        if (currentNode) {
+            this.insertBefore(currentNode, node);
+        } else {
+            this.setTail(node);
+        }
+    }
+
+    // O(n^2) time | O(1) space
+    removeNodesWithValue(value) {
+        let node = this.head;
+
+        while (node) {
+            let nodeToRemove = node;
+            node = node.next;
+
+            if (value === nodeToRemove.value) {
+                this.remove(nodeToRemove);
+            }
+        }
+    }
+
+    // O(n) time | O(1) space
+    remove(node) {
+        if (node === this.head) {
+            this.head = this.head.next;
+            node.next = null;
+            return;
+        }
+
+        this.removeNodeBindings(node);
+    }
+
+    // O(n) time | O(1) space
+    containsNodeWithValue(value) {
+        let node = this.head;
+
+        while (node && node.value !== value) {
+            node = node.next;
+        }
+
+        return node !== null;
+    }
+
+    removeNodeBindings(node) {
+        if (!node.next) {
+            let secondLast = this.head;
+
+            while (secondLast.next.next) {
+                secondLast = secondLast.next;
+            }
+
+            secondLast.next = null;
+        } else {
+            let prevNode = this.head;
+
+            while (prevNode.next !== node) {
+                prevNode = prevNode.next;
+            }
+
+            prevNode.next = node.next;
+        }
+
+        node.next = null;
+    }
+}
+
 class DoublyLinkedList {
     constructor() {
         this.head = null;
@@ -127,7 +301,6 @@ class DoublyLinkedList {
 
     removeNodeBindings(node) {
         if (node.next) {
-            // console.log("object");
             node.next.prev = node.prev;
         }
         if (node.prev) {
@@ -169,26 +342,42 @@ class DoublyLinkedList {
     }
 }
 
-const list = new DoublyLinkedList();
+const list = new LinkedList();
 const listValues = [10, 8, 5, 7, 9, 1, 6, 4];
 
-list.insertValues(listValues);
-
-list.printList();
+for (const num of listValues) {
+    list.insert(new Node(num));
+}
 
 console.log(list.containsNodeWithValue(7));
-
-let nodeToInsert = list.head;
-let node = list.head;
-
-while (nodeToInsert && nodeToInsert.value !== 9) {
-    nodeToInsert = nodeToInsert.next;
-}
-
-while (node && node.value !== 5) {
-    node = node.next;
-}
-
-list.insertBefore(node, nodeToInsert);
+console.log(list.containsNodeWithValue(11));
 
 list.printList();
+
+list.insertBefore(list.head.next.next.next, list.head.next);
+
+list.printList();
+
+// const list = new DoublyLinkedList();
+// const listValues = [10, 8, 5, 7, 9, 1, 6, 4];
+
+// list.insertValues(listValues);
+
+// list.printList();
+
+// console.log(list.containsNodeWithValue(7));
+
+// let nodeToInsert = list.head;
+// let node = list.head;
+
+// while (nodeToInsert && nodeToInsert.value !== 9) {
+//     nodeToInsert = nodeToInsert.next;
+// }
+
+// while (node && node.value !== 5) {
+//     node = node.next;
+// }
+
+// list.insertBefore(node, nodeToInsert);
+
+// list.printList();
