@@ -1,0 +1,23 @@
+Given a binary tree, we need to return the sum of depths of
+each node
+
+        1(0)
+      /   \
+     2(1)  3(1)
+    /  \   /  \
+   4(2) 5 6    7(2)
+  / \
+ 8   9(3)
+
+depth = 0(root) + 2 * 1(level1) + 4 * 2(level2) + 2 * 3(level3)
+depth = 16
+
+Complexity Analysis:
+
+Recursive approach:
+Time: O(N)
+Space: O(h), where `h` is the height of the binary tree
+
+Iterative approach:
+Time: O(N)
+Space: O(h)
