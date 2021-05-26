@@ -115,10 +115,11 @@ class BST {
     }
 }
 
-module.exports = { BST };
-// const root = new BST(10);
+const root = new BST(10);
 
-// root.insert(8).insert(7).insert(6).insert(11).insert(9).insert(16);
+root.insert(8).insert(7).insert(6).insert(11).insert(9).insert(16);
+
+module.exports = { BST, root };
 
 /**
         10
