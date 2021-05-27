@@ -28,8 +28,7 @@ class LinkedList {
     }
 
     // O(n) time | O(1) space
-    printList() {
-        let node = this.head;
+    printList(node) {
         let outputStr = "";
 
         while (node) {
@@ -155,6 +154,24 @@ class LinkedList {
         }
 
         return node !== null;
+    }
+
+    // O(n) time | O(1) space
+    reverse() {
+        let currentNode = this.head;
+        let prev = null;
+        let next = null;
+
+        while (true) {
+            if (!currentNode) break;
+
+            next = currentNode.next;
+            currentNode.next = prev;
+            prev = currentNode;
+            currentNode = next;
+        }
+
+        return prev;
     }
 
     removeNodeBindings(node) {
@@ -349,35 +366,10 @@ for (const num of listValues) {
     list.insert(new Node(num));
 }
 
-console.log(list.containsNodeWithValue(7));
-console.log(list.containsNodeWithValue(11));
-
-list.printList();
-
-list.insertBefore(list.head.next.next.next, list.head.next);
-
-list.printList();
-
-// const list = new DoublyLinkedList();
-// const listValues = [10, 8, 5, 7, 9, 1, 6, 4];
-
-// list.insertValues(listValues);
-
-// list.printList();
-
 // console.log(list.containsNodeWithValue(7));
+// console.log(list.containsNodeWithValue(11));
 
-// let nodeToInsert = list.head;
-// let node = list.head;
+list.printList(list.head);
+list.printList(list.reverse());
 
-// while (nodeToInsert && nodeToInsert.value !== 9) {
-//     nodeToInsert = nodeToInsert.next;
-// }
-
-// while (node && node.value !== 5) {
-//     node = node.next;
-// }
-
-// list.insertBefore(node, nodeToInsert);
-
-// list.printList();
+// list.insertBefore(list.head.next.next.next, list.head.next);
