@@ -12,5 +12,6 @@ int main() {
     for(it = ans.begin(); it < ans.end(); it++) {
         cout << *it << endl;
     }
+    
     return 0;
 }
