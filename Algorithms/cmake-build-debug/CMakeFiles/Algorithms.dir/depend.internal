@@ -3,7 +3,10 @@
 
 CMakeFiles/Algorithms.dir/main.cpp.o
  /home/edydee/home/all/dsa/Algorithms/main.cpp
- /home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.h
+ /home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h
 CMakeFiles/Algorithms.dir/two_number_sum/two_number_sum.cpp.o
  /home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.cpp
  /home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.h
+CMakeFiles/Algorithms.dir/validate-sequence/ValidateSequenceProblem.cpp.o
+ /home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.cpp
+ /home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h

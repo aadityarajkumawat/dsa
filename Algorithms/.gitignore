@@ -34,6 +34,6 @@ dist/
 # Lock files
 yark.lock
 package-lock.json
-.idea
-cmake-build-debug
+.idea/
+cmake-build-debug/
 CMakeLists.txt

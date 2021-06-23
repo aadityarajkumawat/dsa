@@ -196,6 +196,33 @@ two_number_sum/two_number_sum.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/two_number_sum/two_number_sum.cpp.s
 .PHONY : two_number_sum/two_number_sum.cpp.s
 
+validate-sequence/ValidateSequenceProblem.o: validate-sequence/ValidateSequenceProblem.cpp.o
+
+.PHONY : validate-sequence/ValidateSequenceProblem.o
+
+# target to build an object file
+validate-sequence/ValidateSequenceProblem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/validate-sequence/ValidateSequenceProblem.cpp.o
+.PHONY : validate-sequence/ValidateSequenceProblem.cpp.o
+
+validate-sequence/ValidateSequenceProblem.i: validate-sequence/ValidateSequenceProblem.cpp.i
+
+.PHONY : validate-sequence/ValidateSequenceProblem.i
+
+# target to preprocess a source file
+validate-sequence/ValidateSequenceProblem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/validate-sequence/ValidateSequenceProblem.cpp.i
+.PHONY : validate-sequence/ValidateSequenceProblem.cpp.i
+
+validate-sequence/ValidateSequenceProblem.s: validate-sequence/ValidateSequenceProblem.cpp.s
+
+.PHONY : validate-sequence/ValidateSequenceProblem.s
+
+# target to generate assembly for a file
+validate-sequence/ValidateSequenceProblem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/validate-sequence/ValidateSequenceProblem.cpp.s
+.PHONY : validate-sequence/ValidateSequenceProblem.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +238,9 @@ help:
 	@echo "... two_number_sum/two_number_sum.o"
 	@echo "... two_number_sum/two_number_sum.i"
 	@echo "... two_number_sum/two_number_sum.s"
+	@echo "... validate-sequence/ValidateSequenceProblem.o"
+	@echo "... validate-sequence/ValidateSequenceProblem.i"
+	@echo "... validate-sequence/ValidateSequenceProblem.s"
 .PHONY : help
 
 

@@ -1,17 +1,21 @@
 #include <iostream>
-#include "two_number_sum/two_number_sum.h"
+#include "./validate-sequence/ValidateSequenceProblem.h"
 
 using namespace std;
 
 int main() {
-    two_number_sum* sol = new two_number_sum();
-    vector<int> array = { 3, 5, 2, 8, 2, 0, 1 };
-    int target = 10;
-    vector<int> ans = sol->two_number_sum_ind(array, target);
-    vector<int>::iterator it;
-    for(it = ans.begin(); it < ans.end(); it++) {
-        cout << *it << endl;
+    ValidateSequenceProblem* k = new ValidateSequenceProblem();
+
+    vector<int> array = { 4, 6, 2, 7, 1, 0, -1, 3, 5 };
+    vector<int> sequence = { 6, 1, 99, 5 };
+
+    bool is_valid = k->validateSum(array, sequence);
+
+    if(is_valid) {
+        cout << "Sequence is valid!" << endl;
     }
-    
+    else {
+        cout << "Sequence is not valid!" << endl;
+    }
     return 0;
 }

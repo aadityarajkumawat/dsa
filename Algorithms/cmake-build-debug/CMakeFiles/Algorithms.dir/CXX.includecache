@@ -9,16 +9,10 @@
 /home/edydee/home/all/dsa/Algorithms/main.cpp
 iostream
 -
-two_number_sum/two_number_sum.h
-/home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.h
+./validate-sequence/ValidateSequenceProblem.h
+/home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h
 
-/home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.cpp
-two_number_sum.h
-/home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.h
-unordered_map
--
-
-/home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.h
+/home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h
 vector
 -
 

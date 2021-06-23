@@ -91,6 +91,12 @@
 		<Unit filename="/home/edydee/home/all/dsa/Algorithms/two_number_sum/two_number_sum.h">
 			<Option target="Algorithms"/>
 		</Unit>
+		<Unit filename="/home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.cpp">
+			<Option target="Algorithms"/>
+		</Unit>
+		<Unit filename="/home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="/home/edydee/home/all/dsa/Algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
