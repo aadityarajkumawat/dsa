@@ -142,6 +142,33 @@ Algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/build
 .PHONY : Algorithms/fast
 
+doubly-linked-list/DoublyLinkedList.o: doubly-linked-list/DoublyLinkedList.cpp.o
+
+.PHONY : doubly-linked-list/DoublyLinkedList.o
+
+# target to build an object file
+doubly-linked-list/DoublyLinkedList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/doubly-linked-list/DoublyLinkedList.cpp.o
+.PHONY : doubly-linked-list/DoublyLinkedList.cpp.o
+
+doubly-linked-list/DoublyLinkedList.i: doubly-linked-list/DoublyLinkedList.cpp.i
+
+.PHONY : doubly-linked-list/DoublyLinkedList.i
+
+# target to preprocess a source file
+doubly-linked-list/DoublyLinkedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/doubly-linked-list/DoublyLinkedList.cpp.i
+.PHONY : doubly-linked-list/DoublyLinkedList.cpp.i
+
+doubly-linked-list/DoublyLinkedList.s: doubly-linked-list/DoublyLinkedList.cpp.s
+
+.PHONY : doubly-linked-list/DoublyLinkedList.s
+
+# target to generate assembly for a file
+doubly-linked-list/DoublyLinkedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/doubly-linked-list/DoublyLinkedList.cpp.s
+.PHONY : doubly-linked-list/DoublyLinkedList.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -232,6 +259,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Algorithms"
+	@echo "... doubly-linked-list/DoublyLinkedList.o"
+	@echo "... doubly-linked-list/DoublyLinkedList.i"
+	@echo "... doubly-linked-list/DoublyLinkedList.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

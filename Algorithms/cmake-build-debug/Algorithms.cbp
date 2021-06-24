@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/edydee/home/all/dsa/Algorithms/doubly-linked-list/DoublyLinkedList.cpp">
+			<Option target="Algorithms"/>
+		</Unit>
+		<Unit filename="/home/edydee/home/all/dsa/Algorithms/doubly-linked-list/DoublyLinkedList.h">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="/home/edydee/home/all/dsa/Algorithms/main.cpp">
 			<Option target="Algorithms"/>
 		</Unit>

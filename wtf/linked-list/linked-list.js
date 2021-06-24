@@ -29,13 +29,13 @@ class LinkedList {
 
     // O(n) time | O(1) space
     printList(node) {
-        let outputStr = "";
+        let outputStr = '';
 
         while (node) {
             if (!node.next) {
                 outputStr += node.value;
             } else {
-                outputStr += node.value + " ➞ ";
+                outputStr += node.value + ' ➞ ';
             }
             node = node.next;
         }
@@ -330,12 +330,12 @@ class DoublyLinkedList {
 
     printList() {
         let node = this.head;
-        let outputStr = "";
+        let outputStr = '';
         while (node !== null) {
             if (node.next === null) {
                 outputStr += node.value;
             } else {
-                outputStr += node.value + " ⇆ ";
+                outputStr += node.value + ' ⇆ ';
             }
             node = node.next;
         }

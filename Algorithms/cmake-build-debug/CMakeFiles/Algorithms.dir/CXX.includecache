@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
+/home/edydee/home/all/dsa/Algorithms/doubly-linked-list/DoublyLinkedList.h
+
 /home/edydee/home/all/dsa/Algorithms/main.cpp
 iostream
 -
-./validate-sequence/ValidateSequenceProblem.h
-/home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h
-
-/home/edydee/home/all/dsa/Algorithms/validate-sequence/ValidateSequenceProblem.h
-vector
--
+./doubly-linked-list/DoublyLinkedList.h
+/home/edydee/home/all/dsa/Algorithms/doubly-linked-list/DoublyLinkedList.h
 

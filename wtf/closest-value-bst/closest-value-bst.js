@@ -1,4 +1,4 @@
-const { BST } = require("../bst-construction/bst-construction");
+const { BST } = require('../bst-construction/bst-construction');
 
 function findClosestValueInBstV0(tree, target) {
     return findClosestValueInBstHelperV0(tree, target, Infinity);

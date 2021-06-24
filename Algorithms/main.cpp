@@ -1,21 +1,27 @@
 #include <iostream>
-#include "./validate-sequence/ValidateSequenceProblem.h"
+#include "./doubly-linked-list/DoublyLinkedList.h"
 
 using namespace std;
 
 int main() {
-    ValidateSequenceProblem* k = new ValidateSequenceProblem();
+    Node *head = new Node(8);
+    auto *list = new DoublyLinkedList(head);
 
-    vector<int> array = { 4, 6, 2, 7, 1, 0, -1, 3, 5 };
-    vector<int> sequence = { 6, 1, 99, 5 };
+    // ================================
+    Node *sec = new Node(7);
+    Node *third = new Node(6);
+    Node *fourth = new Node(5);
 
-    bool is_valid = k->validateSum(array, sequence);
+    // ================================
+    list->push_back(sec);
+    list->push_back(third);
+    list->push_back(fourth);
 
-    if(is_valid) {
-        cout << "Sequence is valid!" << endl;
-    }
-    else {
-        cout << "Sequence is not valid!" << endl;
-    }
+    // ================================
+    bool found = list->containsNodeWithValue(10);
+
+    // ================================
+    list->remove(third);
+    list->printList();
     return 0;
 }
