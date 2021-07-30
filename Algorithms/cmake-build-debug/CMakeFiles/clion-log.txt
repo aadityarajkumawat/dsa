@@ -1,4 +1,1 @@
-/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/edydee/home/all/dsa/Algorithms
--- Configuring done
--- Generating done
--- Build files have been written to: /home/edydee/home/all/dsa/Algorithms/cmake-build-debug
+CMakeLists.txt not found in /home/edydee/home/all/dsa/Algorithms Select CMakeLists.txt
