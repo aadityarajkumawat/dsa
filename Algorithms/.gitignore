@@ -37,4 +37,4 @@ package-lock.json
 
 # cache
 .cache
-*/*.out
+validate-subsequence
