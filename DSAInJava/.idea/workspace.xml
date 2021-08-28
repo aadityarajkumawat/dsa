@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d1e6628-b42f-479b-8cdc-05706fd48f60" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrayins.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrayins.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrdel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrdel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrdelnewarray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrdelnewarray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrinsnewarray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSAInJava/com/dsainjava/arrinsnewarray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dsainjava/arrdel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dsainjava/arrdel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dsainjava/arrinsnewarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dsainjava/arrinsnewarray.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1xMyabrboCF5b9XcVVJzijn2O5b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="maxelem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dsainjava.maxelem" />
+      <module name="DSAInJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dsainjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.maxelem" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d1e6628-b42f-479b-8cdc-05706fd48f60" name="Changes" comment="" />
+      <created>1630179315581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630179315581</updated>
+      <workItem from="1630179316906" duration="35000" />
+      <workItem from="1630179361767" duration="55000" />
+      <workItem from="1630179420149" duration="517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
