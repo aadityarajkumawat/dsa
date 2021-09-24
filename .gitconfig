@@ -1,3 +1,6 @@
 [user]
     name=AdityaTsDS
     email=aditya@thesmalldatastore.com
+
+[alias]
+    commit-tsds = -c user.name='AdityaTsDS' -c user.email='aditya@thesmalldatastore.com' commit
