@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//
+// this is added
 int calc_factorial(int x) {
     int factorial;
     if (x == 1) return x;
