@@ -16,13 +16,12 @@ bool is_sub_sequence(vector<int>* arr, vector<int>* sub_seq) {
 }
 
 int main() {
-    vector<int> arr = { 3, 4, 5, 7, 3, 0, 11 };
-    vector<int> sub_seq = { 3, 7, -1 };
+    vector<int> arr = {3, 4, 5, 7, 3, 0, 11};
+    vector<int> sub_seq = {3, 7, -1};
     bool is_sub_seq = is_sub_sequence(&arr, &sub_seq);
     if (is_sub_seq) {
         cout << "Subsequence" << endl;
-    }
-    else {
+    } else {
         cout << "Not a subsequence" << endl;
     }
     return 0;
