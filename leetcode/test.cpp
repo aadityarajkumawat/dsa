@@ -1,19 +1,66 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+class Node {
+   public:
+    int val;
+    Node *next;
+
+    Node() {
+        val = 0;
+        next = nullptr;
+    }
+
+    Node(int val) {
+        this->val = val;
+        this->next = nullptr;
+    }
+
+    Node(int val, Node *next) {
+        this->val = val;
+        this->next = next;
+    }
+
+    void setVal(int val) { this->val = val; }
+    int getVal() { return val; }
+
+    void setNext(Node *next) { this->next = next; }
+    Node *getNext() { return next; }
+};
+
+void push(Node *node, int val) {
+    if (node == nullptr) {
+        node = new Node(val);
+        return;
+    }
+
+    Node *ptr = node;
+    while (ptr->next != nullptr) {
+        ptr = ptr->next;
+    }
+    ptr->next = new Node(val);
+}
+
+void push(Node **node, int val) {
+    if (*node == nullptr) {
+        *node = new Node(val);
+        return;
+    }
+
+    Node *ptr = *node;
+    while (ptr->next != nullptr) {
+        ptr = ptr->next;
+    }
+    ptr->next = new Node(val);
 }
 
 int main() {
-    int a = 6;
-    int b = 7;
+    Node *head = nullptr;
+    cout << "address of head: " << head << ", address of pointer to address of head: " << &head << endl;
 
-    swap(a, b);
+    push(&head, 4);
 
-    cout << a << " " << b << endl;
+    cout << head->val << endl;
 
     return 0;
 }
