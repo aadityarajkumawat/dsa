@@ -54,11 +54,36 @@ void push(Node **node, int val) {
     ptr->next = new Node(val);
 }
 
+void some_func(Node *node) {
+    cout << node->val << endl;
+    Node *ptr = node;
+
+    cout << "node: " << node << endl;
+    cout << "address of node: " << &node << endl;
+
+    cout << "ptr: " << ptr << endl;
+    cout << "address of ptr: " << &ptr << endl;
+    cout << ptr->val << endl;
+
+    cout << "moving it forwards..." << endl;
+    ptr = ptr->next;
+
+    cout << ptr->val << endl;
+
+    // ptr = ptr->next;
+}
+
 int main() {
     Node *head = nullptr;
-    cout << "address of head: " << head << ", address of pointer to address of head: " << &head << endl;
 
+    push(&head, 2);
+    push(&head, 3);
     push(&head, 4);
+    push(&head, 5);
+    push(&head, 6);
+
+    // cout << head->val << endl;
+    some_func(head);
 
     cout << head->val << endl;
 
