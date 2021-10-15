@@ -1,8 +1,7 @@
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 
-let command =
-    "clear && g++ -o main ListNode.cpp fmdill.cpp && ./main && rm ./main";
+let command = `clear && g++ -o main ./header-files/ListNode.cpp ${process.argv[2]} && ./main && rm ./main`;
 
 exec(command, (err, stdout, _) => {
     if (err) {

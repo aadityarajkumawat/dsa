@@ -26,3 +26,14 @@ void ListNode::traversal() {
     }
     cout << endl;
 }
+
+void ListNode::push(int x) {
+    ListNode* ptr = this;
+
+    while (ptr->next != nullptr) {
+        ptr = ptr->next;
+    }
+
+    ListNode* new_node = new ListNode(x);
+    ptr->next = new_node;
+}

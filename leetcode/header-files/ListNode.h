@@ -11,6 +11,8 @@ class ListNode {
     ListNode(int val, ListNode* next);
 
     void traversal();
+
+    void push(int x);
 };
 
 #endif
