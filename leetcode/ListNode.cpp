@@ -24,4 +24,5 @@ void ListNode::traversal() {
         cout << ptr->val << " ";
         ptr = ptr->next;
     }
+    cout << endl;
 }
