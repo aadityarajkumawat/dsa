@@ -1,3 +1,5 @@
+package programs;
+
 import java.util.Scanner;
 
 class ArrayQueue {
@@ -80,30 +82,30 @@ public class QueueArray {
                     + "5. Overflow Check \n" + "6. Underflow \n");
             int choice = sc.nextInt();
             switch (choice) {
-                case 1:
-                    System.out.println("Enqueue operation\ninput a number:");
-                    int val = sc.nextInt();
-                    q.enqueue(val);
-                    break;
-                case 2:
-                    System.out.println("Dequeue operation");
-                    q.dequeue();
-                    break;
-                case 3:
-                    System.out.println("Peek Operation: " + q.peek());
-                    break;
-                case 4:
-                    System.out.println("Display operation");
-                    q.display();
-                    break;
-                case 5:
-                    System.out.println("Overflow status: " + q.overflow());
-                    break;
-                case 6:
-                    System.out.println("Empty status: " + q.underflow());
-                    break;
-                default:
-                    System.out.println("invalid input");
+            case 1:
+                System.out.println("Enqueue operation\ninput a number:");
+                int val = sc.nextInt();
+                q.enqueue(val);
+                break;
+            case 2:
+                System.out.println("Dequeue operation");
+                q.dequeue();
+                break;
+            case 3:
+                System.out.println("Peek Operation: " + q.peek());
+                break;
+            case 4:
+                System.out.println("Display operation");
+                q.display();
+                break;
+            case 5:
+                System.out.println("Overflow status: " + q.overflow());
+                break;
+            case 6:
+                System.out.println("Empty status: " + q.underflow());
+                break;
+            default:
+                System.out.println("invalid input");
 
             }
             q.display();

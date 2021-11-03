@@ -1,21 +1,15 @@
+package programs;
+
 import java.util.Scanner;
 
 public class minelem {
     /**
-     * input: size: N, array: a
-     * Time Complexity: O(N) | Space Complexity: O(N)
-     * ********* Algorithm for finding min element *********
-     * START
-     * min = MAX_INT
-     * for(0 to N-1)
-     * if(a[i] < min)
-     * min = a[i]
-     * END OF IF
-     * END OF FOR
-     * print(min)
+     * input: size: N, array: a Time Complexity: O(N) | Space Complexity: O(N)
+     * ********* Algorithm for finding min element ********* START min = MAX_INT
+     * for(0 to N-1) if(a[i] < min) min = a[i] END OF IF END OF FOR print(min)
      * ****************************************************
      */
-    @SuppressWarnings({"resource"})
+    @SuppressWarnings({ "resource" })
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
         System.out.println("Enter size of array:");

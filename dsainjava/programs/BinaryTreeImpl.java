@@ -1,17 +1,17 @@
-package tree;
+package programs;
 
-class Node {
+class BNode {
     private int data;
-    private Node left;
-    private Node right;
+    private BNode left;
+    private BNode right;
 
-    Node(int data) {
+    BNode(int data) {
         this.data = data;
         this.left = null;
         this.right = null;
     }
 
-    Node(int data, Node left, Node right) {
+    BNode(int data, BNode left, BNode right) {
         this.data = data;
         this.left = left;
         this.right = right;
@@ -25,32 +25,32 @@ class Node {
         return data;
     }
 
-    public void setLeft(Node left) {
+    public void setLeft(BNode left) {
         this.left = left;
     }
 
-    public Node getLeft() {
+    public BNode getLeft() {
         return left;
     }
 
-    public void setRight(Node right) {
+    public void setRight(BNode right) {
         this.right = right;
     }
 
-    public Node getRight() {
+    public BNode getRight() {
         return right;
     }
 }
 
 class BinaryTree {
-    Node root = null;
+    BNode root = null;
 
     public void insert(int val) {
         root = insert(root, val);
     }
 
-    private Node insert(Node node, int val) {
-        Node newNode = new Node(val);
+    private BNode insert(BNode node, int val) {
+        BNode newNode = new BNode(val);
 
         if (node == null) {
             node = newNode;
@@ -69,7 +69,7 @@ class BinaryTree {
         return search(root, val);
     }
 
-    public boolean search(Node node, int val) {
+    public boolean search(BNode node, int val) {
         if (node.getData() == val) {
             return true;
         } else {
@@ -86,7 +86,7 @@ class BinaryTree {
         return countNodes(root);
     }
 
-    public int countNodes(Node node) {
+    public int countNodes(BNode node) {
         if (node == null)
             return 0;
         else {

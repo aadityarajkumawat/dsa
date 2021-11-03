@@ -1,3 +1,5 @@
+package programs;
+
 import java.util.*;
 
 public class arrayins {

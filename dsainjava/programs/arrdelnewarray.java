@@ -1,6 +1,9 @@
+package programs;
+
 import java.util.Scanner;
 
-public class arrdel {
+public class arrdelnewarray {
+    @SuppressWarnings({ "resource" })
     public static void printArray(int[] arr, int size) {
         for (int i = 0; i < size; i++) {
             System.out.print(arr[i] + " ");
@@ -22,12 +25,17 @@ public class arrdel {
         printArray(a, size);
         System.out.println("Enter position to be removed");
         int pos = ip.nextInt();
-        for (int i = pos; i < size - 1; i++) {
-            a[i] = a[i + 1];
+        int[] newarr = new int[10];
+        int j = 0;
+        for (int i = 0; i < size; i++) {
+            if (i != pos) {
+                newarr[j] = a[i];
+                j++;
+            }
         }
-        size = size - 1;
         System.out.println("Deletion successful");
         System.out.println("Array after deletion");
-        printArray(a, size);
+        printArray(newarr, size - 1);
+
     }
 }

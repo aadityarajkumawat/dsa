@@ -1,3 +1,5 @@
+package programs;
+
 import java.util.Scanner;
 
 class CircularQueue {
@@ -93,30 +95,30 @@ public class CircularQueueArray {
                     + "4. Underflow Check \n" + "5. Peek \n" + "6. Display \n");
             int choice = sc.nextInt();
             switch (choice) {
-                case 1:
-                    System.out.println("Push Operation\ninput a number:");
-                    int val = sc.nextInt();
-                    s.push(val);
-                    break;
-                case 2:
-                    System.out.println("Pop Operation");
-                    s.pop();
-                    break;
-                case 3:
-                    System.out.println("Overflow Check: " + s.overflow());
-                    break;
-                case 4:
-                    System.out.println("Underflow Check: " + s.underflow());
-                    break;
-                case 5:
-                    System.out.println("Peek: " + s.peek());
-                    break;
-                case 6:
-                    System.out.println("Display");
-                    s.display();
-                    break;
-                default:
-                    System.out.println("invalid input");
+            case 1:
+                System.out.println("Push Operation\ninput a number:");
+                int val = sc.nextInt();
+                s.push(val);
+                break;
+            case 2:
+                System.out.println("Pop Operation");
+                s.pop();
+                break;
+            case 3:
+                System.out.println("Overflow Check: " + s.overflow());
+                break;
+            case 4:
+                System.out.println("Underflow Check: " + s.underflow());
+                break;
+            case 5:
+                System.out.println("Peek: " + s.peek());
+                break;
+            case 6:
+                System.out.println("Display");
+                s.display();
+                break;
+            default:
+                System.out.println("invalid input");
             }
             s.display();
             System.out.println("\nDo you want to continue(y/ n)");
