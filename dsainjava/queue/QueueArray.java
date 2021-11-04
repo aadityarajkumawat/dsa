@@ -1,4 +1,4 @@
-package programs;
+package queue;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package programs;
+package stack;
 
 public class Stack {
     private int top = -1, size;

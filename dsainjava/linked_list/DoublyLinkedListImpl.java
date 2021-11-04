@@ -1,4 +1,4 @@
-package programs;
+package linked_list;
 
 class DNode {
     private int data;

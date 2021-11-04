@@ -1,13 +1,16 @@
-package programs;
+package array;
 
 import java.util.Scanner;
 
-public class minelem {
+public class secondmax {
     /**
      * input: size: N, array: a Time Complexity: O(N) | Space Complexity: O(N)
-     * ********* Algorithm for finding min element ********* START min = MAX_INT
-     * for(0 to N-1) if(a[i] < min) min = a[i] END OF IF END OF FOR print(min)
-     * ****************************************************
+     * ********* Algorithm for finding second max element ********* START max = 0
+     * second_max = 0 for(0 to N-1) if(a[i] > max) second_max = max max = a[i] END
+     * OF IF else if (a[i] > second_max and a[i] < max) second_max = a[i] END OF
+     * ELSE IF END OF FOR
+     *
+     * print(second_max) ****************************************************
      */
     @SuppressWarnings({ "resource" })
     public static void main(String[] args) {
@@ -24,12 +27,16 @@ public class minelem {
         for (int i = 0; i < size; i++) {
             System.out.print(a[i] + " ");
         }
-        int minElement = Integer.MAX_VALUE;
+        int max = 0;
+        int second_max = 0;
         for (int i = 0; i < size; i++) {
-            if (a[i] < minElement) {
-                minElement = a[i];
+            if (a[i] > max) {
+                second_max = max;
+                max = a[i];
+            } else if (a[i] > second_max && a[i] < max) {
+                second_max = a[i];
             }
         }
-        System.out.println("\nMin element in array is:\n" + minElement);
+        System.out.println("\nSecond max element in array is:\n" + second_max);
     }
 }

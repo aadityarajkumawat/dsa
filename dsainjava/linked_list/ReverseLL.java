@@ -1,4 +1,6 @@
-package programs;
+package linked_list;
+
+import common.Node;
 
 class LinkedListOperations extends LinkedList {
     /**
@@ -10,8 +12,8 @@ class LinkedListOperations extends LinkedList {
         Node nex = head;
 
         while (nex != null) {
-            nex = curr.next;
-            curr.next = prev;
+            nex = curr.getNext();
+            curr.setNext(prev);
             prev = curr;
             curr = nex;
         }

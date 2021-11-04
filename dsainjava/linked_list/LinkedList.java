@@ -1,4 +1,6 @@
-package programs;
+package linked_list;
+
+import common.Node;
 
 public class LinkedList {
     public Node head = null;
@@ -155,7 +157,7 @@ public class LinkedList {
         Node ptr = head;
 
         while (ptr != null) {
-            ptr = ptr.next;
+            ptr = ptr.getNext();
             len++;
         }
 

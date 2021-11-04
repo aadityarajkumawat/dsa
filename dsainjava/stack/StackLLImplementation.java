@@ -1,4 +1,6 @@
-package programs;
+package stack;
+
+import common.Node;
 
 class StackLL {
     private Node top = null;
@@ -15,7 +17,7 @@ class StackLL {
             return;
         }
 
-        newNode.next = top;
+        newNode.setNext(top);
         top = newNode;
     }
 
@@ -35,7 +37,7 @@ class StackLL {
         Node ptr = top;
 
         while (ptr != null) {
-            System.out.println(ptr.data + " ");
+            System.out.println(ptr.getData() + " ");
             ptr = ptr.getNext();
         }
         System.out.println();

@@ -1,4 +1,4 @@
-package programs;
+package common;
 
 public class Node {
     protected int data;

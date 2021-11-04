@@ -1,16 +1,16 @@
-package programs;
+package array;
 
 import java.util.Scanner;
 
-public class secondmax {
+public class secondmin {
     /**
      * input: size: N, array: a Time Complexity: O(N) | Space Complexity: O(N)
-     * ********* Algorithm for finding second max element ********* START max = 0
-     * second_max = 0 for(0 to N-1) if(a[i] > max) second_max = max max = a[i] END
-     * OF IF else if (a[i] > second_max and a[i] < max) second_max = a[i] END OF
-     * ELSE IF END OF FOR
+     * ********* Algorithm for finding second min element ********* START min =
+     * MAX_INT second_min = MAX_INT for(0 to N-1) if(a[i] < min) second_min = min
+     * min = a[i] END OF IF else if (a[i] < second_min and a[i] > min) second_min =
+     * a[i] END OF ELSE IF END OF FOR
      *
-     * print(second_max) ****************************************************
+     * print(second_min) ****************************************************
      */
     @SuppressWarnings({ "resource" })
     public static void main(String[] args) {
@@ -27,16 +27,16 @@ public class secondmax {
         for (int i = 0; i < size; i++) {
             System.out.print(a[i] + " ");
         }
-        int max = 0;
-        int second_max = 0;
+        int min = Integer.MAX_VALUE;
+        int second_min = Integer.MAX_VALUE;
         for (int i = 0; i < size; i++) {
-            if (a[i] > max) {
-                second_max = max;
-                max = a[i];
-            } else if (a[i] > second_max && a[i] < max) {
-                second_max = a[i];
+            if (a[i] < min) {
+                second_min = min;
+                min = a[i];
+            } else if (a[i] < second_min && a[i] > min) {
+                second_min = a[i];
             }
         }
-        System.out.println("\nSecond max element in array is:\n" + second_max);
+        System.out.println("\nSecond min element in array is:\n" + second_min);
     }
 }

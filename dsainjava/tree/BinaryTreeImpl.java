@@ -1,4 +1,4 @@
-package programs;
+package tree;
 
 class BNode {
     private int data;

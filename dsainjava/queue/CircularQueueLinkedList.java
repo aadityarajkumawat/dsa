@@ -1,4 +1,6 @@
-package programs;
+package queue;
+
+import common.Node;
 
 class CircularQueueLL {
     private Node front = null;
@@ -20,15 +22,15 @@ class CircularQueueLL {
     public void enqueue(int x) {
         Node newNode = new Node(x);
         if (front == null && rear == null) {
-            newNode.next = newNode;
+            newNode.setNext(newNode);
             front = newNode;
             rear = newNode;
             return;
         }
 
-        rear.next = newNode;
+        rear.setNext(newNode);
         rear = newNode;
-        newNode.next = front;
+        newNode.setNext(front);
     }
 
     public void dequeue() {
@@ -38,8 +40,8 @@ class CircularQueueLL {
             front = null;
             rear = null;
         } else {
-            rear.next = front.next;
-            front = rear.next;
+            rear.setNext(front.getNext());
+            front = rear.getNext();
         }
     }
 
@@ -92,6 +94,5 @@ public class CircularQueueLinkedList {
         cq.enqueue(11);
 
         cq.traversal();
-        // System.out.println("Length of queue: " + cq.lengthOfQueue());
     }
 }

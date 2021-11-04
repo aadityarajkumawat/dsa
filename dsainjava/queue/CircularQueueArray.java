@@ -1,5 +1,6 @@
-package programs;
+package queue;
 
+import stack.*;
 import java.util.Scanner;
 
 class CircularQueue {
