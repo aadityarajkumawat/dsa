@@ -1,0 +1,3 @@
+#!/bin/bash
+file=$1
+clear && g++ -o main ./header-files/TreeNode.cpp $file && ./main && rm ./main

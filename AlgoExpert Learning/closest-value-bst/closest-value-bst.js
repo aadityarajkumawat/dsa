@@ -1,49 +1,21 @@
-const { BST } = require('../bst-construction/bst-construction');
+const { BST } = require("../bst-construction/bst-construction");
 
-function findClosestValueInBstV0(tree, target) {
-    return findClosestValueInBstHelperV0(tree, target, Infinity);
-}
+function helper0(tree, target, closest) {
+    if (!tree) return closest;
 
-function findClosestValueInBstHelperV0(tree, target, closest) {
-    if (!tree) {
-        return closest;
-    }
-
-    if (Math.abs(target - tree.value) < Math.abs(target - closest)) {
+    if (Math.abs(target - closest) > Math.abs(target - tree.value)) {
         closest = tree.value;
     }
 
     if (target < tree.value) {
-        return findClosestValueInBstHelperV0(tree.left, target, closest);
+        return helper0(tree.left, target, closest);
     } else if (target > tree.value) {
-        return findClosestValueInBstHelperV0(tree.right, target, closest);
-    } else {
-        return closest;
-    }
+        return helper0(tree.right, target, closest);
+    } else return closest;
 }
 
-function findClosestValueInBstV1(tree, target) {
-    return findClosestValueInBstHelperV1(tree, target, Infinity);
-}
-
-function findClosestValueInBstHelperV1(tree, target, closest) {
-    let currentNode = tree;
-
-    while (currentNode) {
-        if (Math.abs(target - currentNode.value) < Math.abs(target - closest)) {
-            closest = currentNode.value;
-        }
-
-        if (target < currentNode.value) {
-            currentNode = currentNode.left;
-        } else if (target > currentNode.value) {
-            currentNode = currentNode.right;
-        } else {
-            break;
-        }
-    }
-
-    return closest;
+function findClosestValueInBstV0(tree, target) {
+    return helper0(tree, target, Infinity);
 }
 
 const root = new BST(10);
