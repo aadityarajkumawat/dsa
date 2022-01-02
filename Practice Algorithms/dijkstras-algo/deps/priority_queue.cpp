@@ -5,7 +5,7 @@ class prioritised_entry {
     int value;
     int weight;
 
-  public:
+public:
     prioritised_entry(int value, int weight) {
         this->value = value;
         this->weight = weight;
@@ -24,7 +24,7 @@ class prioritised_entry {
 class priority_queue_1 {
     vector<prioritised_entry *> pq;
 
-  public:
+public:
     priority_queue_1() {}
 
     void add(prioritised_entry *entry) {
@@ -42,7 +42,7 @@ class priority_queue_1 {
                 inserted = true;
                 for (int j = pq.size() - 1; j >= i; j--) {
                     if (j == pq.size() - 1) {
-                        prioritised_entry* o = pq[j];
+                        prioritised_entry *o = pq[j];
                         pq.push_back(o);
                     } else {
                         pq[j + 1] = pq[j];
@@ -59,31 +59,31 @@ class priority_queue_1 {
         }
     }
 
-    prioritised_entry* peek() {
+    prioritised_entry *peek() {
         return pq[0];
     }
 
     void traverse_queue() {
         for (int i = 0; i < pq.size(); i++) {
-            prioritised_entry* curr = pq[i];
-            std::cout << "{" << curr->get_value() << ", " << curr->get_weight() << "}" << " ";
+            prioritised_entry *curr = pq[i];
+            std::cout << "{" << curr->get_value() << ", " << curr->get_weight() << "}"
+                      << " ";
         }
         std::cout << std::endl;
     }
 };
 
-int main() { 
-    priority_queue_1* pq = new priority_queue_1();
-    
-    prioritised_entry* pq_e2 = new prioritised_entry(1, 5);
+int main() {
+    priority_queue_1 *pq = new priority_queue_1();
+
+    prioritised_entry *pq_e2 = new prioritised_entry(1, 5);
     pq->add(pq_e2);
 
-    prioritised_entry* pq_e1 = new prioritised_entry(4, 3);
+    prioritised_entry *pq_e1 = new prioritised_entry(4, 3);
     pq->add(pq_e1);
 
-    prioritised_entry* pq_e3 = new prioritised_entry(7, 7);
+    prioritised_entry *pq_e3 = new prioritised_entry(7, 7);
     pq->add(pq_e3);
-
 
     pq->traverse_queue();
 
